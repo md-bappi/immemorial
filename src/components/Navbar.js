@@ -6,16 +6,16 @@ const Navbar = () => {
   const li1 = useRef(null);
   const li2 = useRef(null);
   const li3 = useRef(null);
-  const favRef = useRef(null);
+  const blogRef = useRef(null);
   const logoRef = useRef(null);
 
   const liArr = [li1, li2, li3];
-  const favArr = [favRef];
+  const blogArr = [blogRef];
   const logoArr = [logoRef];
 
   useGsapDownStagger(liArr, 0.9);
   useGsapDownStagger(logoArr, 1.5);
-  useGsapDownStagger(favArr, 1.8);
+  useGsapDownStagger(blogArr, 1.8);
 
   return (
     <nav className="navbar wrapper">
@@ -35,8 +35,8 @@ const Navbar = () => {
           <h2>Immemorial</h2>
         </Link>
       </div>
-      <div className="favourite-link" ref={favRef}>
-        <Link to={"/favourites"}>favourites</Link>
+      <div className="blog-link" ref={blogRef}>
+        <Link to={"/blog"}>blog</Link>
       </div>
     </nav>
   );
